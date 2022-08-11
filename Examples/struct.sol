@@ -29,6 +29,17 @@ contract Structs {
         cars.push(toyota);
         cars.push(lambo);
         cars.push(tesla);
+
+        cars.push(Car("Ferari", 2020, msg.sender));
+
+        //Accessing and updating elements in the array
+        Car storage _car = cars[0];
+        _car.year = 1999;
+        //Reset the owner of the car
+        delete _car.owner;
+
+        //Deleting specific car struct
+        delete cars[1];
     }
 
 }
