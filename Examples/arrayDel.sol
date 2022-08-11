@@ -21,7 +21,7 @@ contract ArrayShift {
         for(uint i = _index; i < arr.length - 1; i++) {
             arr[i] = arr[i + 1]; //sets the value of i to be same as the next value to it
         }
-        arr.pop();
+        arr.pop(); //removes the last element from array since it recurs
      }
 
      function test() external {
@@ -32,7 +32,7 @@ contract ArrayShift {
         assert(arr[1] == 2);
         assert(arr[2] == 4);
         assert(arr[3] == 5);
-        assert(arr..length == 4);
+        assert(arr.length == 4);
 
         arr = [1];
         remove(0);
