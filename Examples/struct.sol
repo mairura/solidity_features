@@ -30,7 +30,7 @@ contract Structs {
         cars.push(lambo);
         cars.push(tesla);
 
-        cars.push(Car("Ferari", 2020, msg.sender));
+        cars.push(Car("Ferrari", 2020, msg.sender));
 
         //Accessing and updating elements in the array
         Car storage _car = cars[0];
